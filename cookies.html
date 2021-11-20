@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Cookies</title>
+        <script type="text/javascript">
+        function WriteCookie(){
+            let name = escape(document.getElementById('student').value)+";";
+            document.cookie = "name= "+name;
+            document.write("Welcome "+document.cookie);
+            
+        }
+
+        function load(){
+            if(document.cookie != null){
+                array = document.cookie.split(";");
+                document.getElementById('student').innerHTML = array[0].split("=")[1];
+                alert(array[0].split("=")[1]);
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form action="cookies.html" onload="load()">
+            Enter name: <input type = "text" id="student"/> 
+            <input type = "button" value = "Set" onclick = "WriteCookie();"/> 
+        </form>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head><title>Dialogs</title></head>
+    <body>
+        <input type="button" value="click" onclick="redirect()">
+        <input type="button" value="click here" onclick="go()">
+        <script type="text/javascript">
+        function redirect(){
+            var c = confirm("Are you sure want to redirect?");
+            if(c==true){
+                window.location.assign("http://www.google.com");
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        function go(){
+            var r = prompt("Enter your name",);
+            alert("welcome "+r);
+        }
+        </script>
+    </body>
+</html>
